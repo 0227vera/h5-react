@@ -1,0 +1,80 @@
+@primary-color: #2e6ffc; // 基础颜色，蓝色
+
+@white-color: #ffffff; //基础颜色,白色
+
+@warning-color: #e6a23c; // 警告色
+
+@success-color: #67c23a; // 绿色
+
+@required-color: #F73A3C; // 必填和error
+
+@base-bg-color: #f6f8fb; // 基础背景颜色
+
+@icon-bg-color: #F3F7FF; // 一般icon的背景颜色
+
+@img-bg-color: #D7E0F4;
+
+@warning-bg-color: #FFFAE6;
+// 字体颜色
+@font-primary-color: #1a1f2d; // 字体主要颜色
+@font-color--secondary: #8f9096; // 字体次要颜色
+@font-color--highlight: @primary-color; // 字体高亮颜色#F73A3C 100%
+@tips-color: @font-color--secondary; // 提示字体颜色
+
+@line-color: #F6F6FB; // 线的颜色
+
+@acive-color: @primary-color; // 被点击后变化的颜色
+
+@padding: 16px 8px; // 两边的留白
+
+@border-radius: 8px; // 大块区域的圆角
+
+@border-radius--secondary: 4px; // 小块区域的圆角
+
+// 一般容器布局
+.layout() {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: @padding;
+}
+
+// 居中
+.center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// cell
+
+.cell() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// 文本溢出
+.single-line_text_overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.double-line_text_overflow() {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.three-line_text_overflow() {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
