@@ -1,87 +1,93 @@
-@import './variable.less';
+@import "./variable.less";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
-	width: 100%;
-	height: 100%;
-	background-color: rgba(246, 248, 251, 1);
-	/*  点击小灰块的问题 */
-	-webkit-text-size-adjust: 100%;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(246, 248, 251, 1);
+  /*  点击小灰块的问题 */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /* 禁止长按图片保存 */
 img {
-	content: normal;
-	-webkit-touch-callout: none;
-	/* 像微信浏览器还是无法禁止，加上这行样式即可 */
-	pointer-events: none;
-	content: normal !important;
-	object-fit: cover;
+  content: normal;
+  -webkit-touch-callout: none;
+  /* 像微信浏览器还是无法禁止，加上这行样式即可 */
+  pointer-events: none;
+  content: normal !important;
+  object-fit: cover;
 }
 
 /* 禁止长按选择文字 */
 div {
-	-webkit-user-select: none;
+  -webkit-user-select: none;
 }
 
 /* 禁止长按呼出菜单 */
 div {
-	-webkit-touch-callout: none;
+  -webkit-touch-callout: none;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 ::-webkit-input-placeholder {
-	color: #c9ced9;
-	font-size: 14px;
+  color: #c9ced9;
+  font-size: 14px;
 }
 input:focus::-webkit-input-placeholder {
-	color: #c9ced9;
-	font-size: 14px;
+  color: #c9ced9;
+  font-size: 14px;
 }
 
 input[disabled],
 textarea[disabled] {
-	background: none;
-	color: @font-primary-color;
+  background: none;
+  color: @font-primary-color;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: @base-bg-color;
 }
 
 // css module 中不给classname加hash等的写法还有一个:local但是好像不是很好用
 :global {
-	.container {
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-	.my-enter {
-		opacity: 0;
-	}
-	.my-active-enter {
-		opacity: 1;
-		transition: opacity 0.3s;
-	}
-	.my-done-enter {
-		opacity: 1;
-	}
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .my-enter {
+    opacity: 0;
+  }
+  .my-active-enter {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .my-done-enter {
+    opacity: 1;
+  }
 
-	.my-exit {
-		opacity: 1;
-	}
-	.my-active-exit {
-		transition: opacity 0.3s;
-		opacity: 0;
-	}
-	.my-done-exit {
-		opacity: 0;
-	}
+  .my-exit {
+    opacity: 1;
+  }
+  .my-active-exit {
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  .my-done-exit {
+    opacity: 0;
+  }
 }
