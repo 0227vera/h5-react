@@ -1,5 +1,7 @@
 # todo
 
+0. 添加 plop 自动配置文件目录和简单调用
+
 1. 初始化 git
 
 2. 优化 webpack 配置，添加 externals，配置 cdn
