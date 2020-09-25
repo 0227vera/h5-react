@@ -10,8 +10,13 @@ git push -u origin master
 
 
 # 建立dev并提交所有的文件
-git branch -M dev
+git branch dev
 git checkout dev
 git add -A
 git commit -m 'init: dev project'
 git push -u origin dev
+
+# 项目安装依赖并启动
+npm i
+npm start
+
