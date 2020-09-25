@@ -9,7 +9,8 @@ git remote add origin "{{gitAddress}}"
 git push -u origin master
 
 
-# 建立dev分别
+# 建立dev并提交所有的文件
 git branch -M dev
 git checkout dev
+git add -A
 git push -u origin dev
