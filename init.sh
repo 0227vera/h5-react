@@ -19,6 +19,9 @@ git push -u origin dev
 # 项目安装依赖
 npm i
 
+# 安装模版依赖
+npm i -g plop
+
 # 安装完成之后删除脚本
 rm -rf init.sh
 

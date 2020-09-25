@@ -27,6 +27,7 @@ h5-react
     └─utils               // 工具类
     | ├─productionId.js   // ID生成器
     ├─pages               // 业务页面
+    ├─plop-templates      // plop模版文件
 │  .commitlintrc.js       // git提交规范
 │  .editorconfig          // eslint风格配置
 │  .eslintignore          // eslint忽略配置
@@ -42,6 +43,7 @@ h5-react
 |  webpack.config.js      // webpack配置
 |  devProxy.js            // 代理配置文件
 |  todo.md                // 待开发说明
+|  plopfile.js            // plop命令入口文件
 ```
 
 ## 项目中的特殊点交代
