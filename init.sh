@@ -16,7 +16,12 @@ git add -A
 git commit -m 'init: dev project'
 git push -u origin dev
 
-# 项目安装依赖并启动
+# 项目安装依赖
 npm i
-npm start
+
+# 安装完成之后删除脚本
+rm -rf init.sh
+
+
+
 
