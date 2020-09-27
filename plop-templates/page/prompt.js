@@ -16,6 +16,12 @@ module.exports = {
       validate: notEmpty("title"),
     },
     {
+      type: "input",
+      name: "mobxName",
+      message:
+        "页面是否需要mobx模块，如果需要输入对应名字，如果不需要为空回车直接过去",
+    },
+    {
       type: "confirm",
       name: "needApi",
       default: true,

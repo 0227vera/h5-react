@@ -1,0 +1,23 @@
+import { observable, action } from "mobx"
+
+class {{ properCase name }} {
+  // 当前用户信息
+  @observable.shallow isTest = null
+
+  @action
+  resetData() {
+    this.isTest = true
+  }
+
+  @action
+  init() {
+    this.isTest = true
+  }
+
+  @action
+  setIsTest(bool) {
+    this.isTest = bool
+  }
+}
+
+export default new {{ properCase name }}()

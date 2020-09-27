@@ -9,6 +9,8 @@ import "./services/SetAxios"
 // 将应用中必不可少的信息先请求之后在渲染页面
 import commonStore from "./stores/commonStore"
 
+/* plop auto add stores import */
+
 // 修正一些不同内核浏览器的样式问题
 import "./assets/style/normalize.css"
 // 全局样式
@@ -43,6 +45,7 @@ const app = () => {
     <Provider
       {...{
         commonStore,
+        /* plop auto add stores */
       }}
     >
       <HashRouter>
