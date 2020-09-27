@@ -1,6 +1,9 @@
 import React from "react"
 import { withRouter } from "react-router-dom"
 import style from "./style/{{ properCase name }}Style.less"
+{{#if needApi}}
+import services from "../../services/services"
+{{/if}}
 
 const {{ properCase name }} = props => {
   const { history } = props

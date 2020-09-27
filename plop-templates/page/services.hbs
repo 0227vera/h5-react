@@ -1,0 +1,22 @@
+import commenPromise, { axiosPostFactory } from "./commenPromise"
+
+export default {
+  /**
+   * @name: post
+   * @param {*} data
+   */
+  uploadFile(data) {
+    return axiosPostFactory({
+      data,
+      url: "/test/post/submit",
+    })
+  },
+  /**
+   * get
+   */
+  getCompanyList() {
+    return commenPromise({
+      url: "/test/get/list",
+    })
+  },
+}

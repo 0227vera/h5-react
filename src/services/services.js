@@ -1,6 +1,7 @@
 import axios from "axios"
 import qs from "qs"
 import CommonApi from "./CommonApi"
+/* plop auto add services import */
 
 axios.interceptors.request.use(request => {
   if (
@@ -14,4 +15,5 @@ axios.interceptors.request.use(request => {
 
 export default {
   ...CommonApi,
+  /* plop auto add services export */
 }

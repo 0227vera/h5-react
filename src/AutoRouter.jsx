@@ -5,6 +5,8 @@ import { Toast } from "antd-mobile"
 // import loadable from '@loadable/component';
 import Home from "./pages/Home"
 import Setting from "./pages/Setting"
+/* 误删,plop自动添加路由的标识 */
+/* plop auto add router import */
 
 // 路由表
 const ROUTES = [
@@ -20,6 +22,7 @@ const ROUTES = [
     title: "设置",
     component: Setting,
   },
+  /* plop auto add router config */
 ]
 
 function AutoRouter() {
