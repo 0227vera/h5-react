@@ -7,7 +7,7 @@ import AutoRouter from "./AutoRouter";
 // 对网络请求的统一设置
 import "./services/SetAxios";
 // 将应用中必不可少的信息先请求之后在渲染页面
-import commonStore from "./stores/commonStore";
+import CommonStore from "./stores/CommonStore";
 
 /* plop auto add stores import */
 
@@ -44,7 +44,7 @@ const app = () => {
   ReactDOM.render(
     <Provider
       {...{
-        commonStore,
+        CommonStore,
         /* plop auto add stores */
       }}
     >
