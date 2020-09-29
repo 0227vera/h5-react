@@ -7,8 +7,8 @@
     "build": "webpack --config webpack.config.js --env.online",
     "dev": "webpack-dev-server --config webpack.config.js --env.dev --env.proxy=test",
     "start": "npm run dev",
-    {{if needInitGit}} "init": "bash init.sh", {{/if}}
-    {{if needInitGit}} "postinit": "npm start", {{/if}}
+    {{if needInitGit}}"init": "bash init.sh", {{/if}}
+    {{if needInitGit}}"postinit": "npm start", {{/if}}
     "lint": "eslint --fix ./src/**/*.jsx ./src/**/*.js"
   },
   "repository": {
