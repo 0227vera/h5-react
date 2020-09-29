@@ -9,8 +9,8 @@ import styles from "./style/Home.less";
 
 const Home = props => {
   const { history } = props;
-  const { commonStore } = React.useContext(MobXProviderContext);
-  const common = toJS(commonStore);
+  const { CommonStore } = React.useContext(MobXProviderContext);
+  const common = toJS(CommonStore);
 
   // 这种使用方式是为了切换class方便，方便做一些动画效果，可以通过state的变量直接控制class的情况
   // const container = cx({ class1: false, class2: true })

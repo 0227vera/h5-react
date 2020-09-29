@@ -56,6 +56,6 @@ const app = () => {
   );
 };
 
-commonStore.init().then(() => {
+CommonStore.init().then(() => {
   app();
 });
