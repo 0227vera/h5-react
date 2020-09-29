@@ -1,4 +1,4 @@
-const { notEmpty } = require("../utils.js")
+const { notEmpty } = require("../utils.js");
 
 module.exports = {
   description: "自动生成一个页面",
@@ -23,13 +23,19 @@ module.exports = {
     },
     {
       type: "confirm",
+      name: "needRouter",
+      default: true,
+      message: "是否需要自动添加router表?",
+    },
+    {
+      type: "confirm",
       name: "needApi",
       default: true,
       message: "是否需要services文件以及相关配置?",
     },
   ],
   actions: data => {
-    const { needApi } = data
+    const { needApi, needRouter } = data;
     const actions = [
       {
         type: "add",
@@ -47,14 +53,17 @@ module.exports = {
         path: "src/pages/{{properCase name}}/index.js",
         templateFile: "plop-templates/page/index.hbs",
       },
-      {
+    ];
+
+    if (needRouter) {
+      actions.push({
         type: "append",
         pattern: /(\/\* plop auto add router import \*\/)/,
         path: "src/AutoRouter.jsx",
         template:
           'import {{ properCase name }} from "./pages/{{properCase name}}"',
-      },
-      {
+      });
+      actions.push({
         type: "append",
         pattern: /(\/\* plop auto add router config \*\/)/,
         path: "src/AutoRouter.jsx",
@@ -64,29 +73,29 @@ module.exports = {
     title: "{{ title }}",
     component: {{ properCase name }},
   },`,
-      },
-    ]
+      });
+    }
 
     if (needApi) {
       actions.push({
         type: "add",
         path: "src/services/{{ properCase name }}Api.js",
         templateFile: "plop-templates/page/services.hbs",
-      })
+      });
       actions.push({
         type: "append",
         pattern: /(\/\* plop auto add services import \*\/)/,
         path: "src/services/services.js",
         template:
           'import {{ properCase name }}Api from "./{{properCase name}}Api"',
-      })
+      });
       actions.push({
         type: "append",
         pattern: /(\/\* plop auto add services export \*\/)/,
         path: "src/services/services.js",
         template: "  ...{{properCase name}}Api,",
-      })
+      });
     }
-    return actions
+    return actions;
   },
-}
+};
