@@ -1,16 +1,16 @@
-import React from "react"
-import { withRouter } from "react-router-dom"
-import { MobXProviderContext } from "mobx-react"
-import { toJS } from "mobx"
-import styles from "./style/Home.less"
+import React from "react";
+import { withRouter } from "react-router-dom";
+import { MobXProviderContext } from "mobx-react";
+import { toJS } from "mobx";
+import styles from "./style/Home.less";
 // import classnames from "classnames/bind"
 
 // const cx = classnames.bind(styles)
 
 const Home = props => {
-  const { history } = props
-  const { commonStore } = React.useContext(MobXProviderContext)
-  const common = toJS(commonStore)
+  const { history } = props;
+  const { commonStore } = React.useContext(MobXProviderContext);
+  const common = toJS(commonStore);
 
   // 这种使用方式是为了切换class方便，方便做一些动画效果，可以通过state的变量直接控制class的情况
   // const container = cx({ class1: false, class2: true })
@@ -33,14 +33,14 @@ const Home = props => {
       <div className={styles.footer}>
         <button
           onClick={() => {
-            history.push("/setting")
+            history.push("/setting");
           }}
         >
           click to go back home
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default withRouter(Home)
+export default withRouter(Home);

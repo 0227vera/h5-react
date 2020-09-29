@@ -1,4 +1,4 @@
-const { notEmpty } = require("../utils.js")
+const { notEmpty } = require("../utils.js");
 
 module.exports = {
   description: "自动生成一个store模版",
@@ -30,7 +30,7 @@ module.exports = {
         path: "src/index.js",
         template: "        {{ properCase name }},",
       },
-    ]
-    return actions
+    ];
+    return actions;
   },
-}
+};

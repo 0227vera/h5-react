@@ -1,6 +1,6 @@
-import axios from "axios"
+import axios from "axios";
 
-const prefix = "{{projectContext}}"
+const prefix = "{{projectContext}}";
 
 export default function ({
   url = "",
@@ -12,24 +12,24 @@ export default function ({
     axios
       .get(url, { params, baseURL, ignoreNotice })
       .then(data => {
-        data ? resolve(data) : reject(data)
+        data ? resolve(data) : reject(data);
       })
       .catch(error => {
-        reject(error)
-      })
-  })
+        reject(error);
+      });
+  });
 }
 
 export function axiosPostFactory(param = {}) {
   return new Promise((resolve, reject) => {
-    param.method = param.method || "post"
-    param.baseURL = param.baseURL || prefix
+    param.method = param.method || "post";
+    param.baseURL = param.baseURL || prefix;
     axios(param)
       .then(data => {
-        data ? resolve(data) : reject(data)
+        data ? resolve(data) : reject(data);
       })
       .catch(error => {
-        reject(error)
-      })
-  })
+        reject(error);
+      });
+  });
 }

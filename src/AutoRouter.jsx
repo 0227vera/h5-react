@@ -1,10 +1,10 @@
-import React from "react"
-import { Route, Switch, Redirect, withRouter } from "react-router-dom"
-import { Toast } from "antd-mobile"
+import React from "react";
+import { Route, Switch, Redirect, withRouter } from "react-router-dom";
+import { Toast } from "antd-mobile";
 // import { TransitionGroup, CSSTransition } from 'react-transition-group';
 // import loadable from '@loadable/component';
-import Home from "./pages/Home"
-import Setting from "./pages/Setting"
+import Home from "./pages/Home";
+import Setting from "./pages/Setting";
 /* 误删,plop自动添加路由的标识 */
 /* plop auto add router import */
 
@@ -23,7 +23,7 @@ const ROUTES = [
     component: Setting,
   },
   /* plop auto add router config */
-]
+];
 
 function AutoRouter() {
   return (
@@ -49,9 +49,9 @@ function AutoRouter() {
           path={ROUTE.path}
           exact={ROUTE.isExact}
           render={props => {
-            Toast.hide()
-            document.title = ROUTE.title
-            return <ROUTE.component {...props} />
+            Toast.hide();
+            document.title = ROUTE.title;
+            return <ROUTE.component {...props} />;
           }}
         />
       ))}
@@ -59,6 +59,6 @@ function AutoRouter() {
     </Switch>
     // 	</CSSTransition>
     // </TransitionGroup>
-  )
+  );
 }
-export default withRouter(AutoRouter)
+export default withRouter(AutoRouter);

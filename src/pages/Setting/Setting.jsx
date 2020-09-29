@@ -1,9 +1,9 @@
-import React from "react"
-import { withRouter } from "react-router-dom"
-import styles from "./style/Setting.less"
+import React from "react";
+import { withRouter } from "react-router-dom";
+import styles from "./style/Setting.less";
 
 const Setting = props => {
-  const { history } = props
+  const { history } = props;
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
@@ -15,14 +15,14 @@ const Setting = props => {
       <div className={styles.footer}>
         <button
           onClick={() => {
-            history.goBack()
+            history.goBack();
           }}
         >
           click to go to setting
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default withRouter(Setting)
+export default withRouter(Setting);

@@ -1,4 +1,4 @@
-import commenPromise, { axiosPostFactory } from "./commenPromise"
+import commenPromise, { axiosPostFactory } from "./commenPromise";
 
 export default {
   /**
@@ -10,7 +10,7 @@ export default {
       headers: { "Content-Type": "multipart/form-data" },
       data,
       url: "/pr/fileInfo/upload",
-    })
+    });
   },
   /**
    * 获取公司主体列表
@@ -18,6 +18,6 @@ export default {
   getCompanyList() {
     return commenPromise({
       url: "/base/company/list",
-    })
+    });
   },
-}
+};

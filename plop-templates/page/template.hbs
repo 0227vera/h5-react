@@ -1,21 +1,21 @@
-import React from "react"
-import { withRouter } from "react-router-dom"
+import React from "react";
+import { withRouter } from "react-router-dom";
 {{#if mobxName}}
-import { MobXProviderContext } from "mobx-react"
-import { toJS } from "mobx"
+import { MobXProviderContext } from "mobx-react";
+import { toJS } from "mobx";
 {{/if}}
 {{#if needApi}}
-import services from "../../services/services"
+import services from "../../services/services";
 {{/if}}
-import style from "./style/{{ properCase name }}Style.less"
+import style from "./style/{{ properCase name }}Style.less";
 
 const {{ properCase name }} = props => {
-  const { history } = props
+  const { history } = props;
   {{#if mobxName}}
-  const { {{ properCase mobxName }} } = React.useContext(MobXProviderContext)
-  const {{ camelCase mobxName }} = toJS({{ properCase mobxName }})
+  const { {{ properCase mobxName }} } = React.useContext(MobXProviderContext);
+  const {{ camelCase mobxName }} = toJS({{ properCase mobxName }});
   {{/if}}
   return <div className={style.container}>content</div>
 }
 
-export default withRouter({{ properCase name }})
+export default withRouter({{ properCase name }});
