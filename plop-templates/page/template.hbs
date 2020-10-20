@@ -15,7 +15,7 @@ const {{ properCase name }} = props => {
   const { {{ properCase mobxName }} } = React.useContext(MobXProviderContext);
   const {{ camelCase mobxName }} = toJS({{ properCase mobxName }});
   {{/if}}
-  return <div className={style.container}>content</div>;
+  return (<div className={style.container}><span>{{ properCase mobxName }}</span></div>);
 }
 
 export default withRouter({{ properCase name }});
